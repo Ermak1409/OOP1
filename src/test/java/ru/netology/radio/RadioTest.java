@@ -11,6 +11,7 @@ class RadioTest {
         Radio radio = new Radio(20, 10, 0);
         radio.setNewCurrentStationButton();
         assertEquals(0, radio.getCurrentStation());
+        
     }
 
 
