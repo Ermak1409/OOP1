@@ -32,6 +32,8 @@ class RadioTest {
 
         assertEquals(0, radio.getCurrentStation());
 
+    }
+    
     @Test
     public void testNextStation1() {
         Radio radio = new Radio();
