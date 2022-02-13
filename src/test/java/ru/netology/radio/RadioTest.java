@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
-    public void testNewStationButton1() {
+    public void testNewStation1() {
         Radio cond = new Radio();
-        cond.setNewCurrentStationButton(10);
+        cond.setCurrentStation(10);
         int expected = 0;
         int actual = cond.getCurrentStation();
 
@@ -17,9 +17,9 @@ class RadioTest {
     }
 
     @Test
-    public void testNewStationButton2() {
+    public void testNewStation2() {
         Radio cond = new Radio();
-        cond.setNewCurrentStationButton(8);
+        cond.setCurrentStation(8);
         int expected = 8;
         int actual = cond.getCurrentStation();
 
@@ -29,7 +29,7 @@ class RadioTest {
     @Test
     public void testNewStationButton3() {
         Radio cond = new Radio();
-        cond.setNewCurrentStationButton(-1);
+        cond.setCurrentStation(-1);
         int expected = 0;
         int actual = cond.getCurrentStation();
 
@@ -39,7 +39,9 @@ class RadioTest {
     @Test
     public void testNextStation1() {
         Radio cond = new Radio();
-        cond.setNextCurrentStation(9);
+
+        cond.setCurrentStation(9);
+        cond.setNextCurrentStation();
 
         int expected = 0;
         int actual = cond.getCurrentStation();
@@ -50,7 +52,10 @@ class RadioTest {
     @Test
     public void testNextStation2() {
         Radio cond = new Radio();
-        cond.setNextCurrentStation(2);
+
+        cond.setCurrentStation(2);
+        cond.setNextCurrentStation();
+
         int expected = 3;
         int actual = cond.getCurrentStation();
 
@@ -60,7 +65,10 @@ class RadioTest {
     @Test
     public void testPrevStation1() {
         Radio cond = new Radio();
-        cond.setPrevCurrentStation(9);
+
+        cond.setCurrentStation(9);
+        cond.setPrevCurrentStation();
+
         int expected = 8;
         int actual = cond.getCurrentStation();
 
@@ -70,7 +78,10 @@ class RadioTest {
     @Test
     public void testPrevStation2() {
         Radio cond = new Radio();
-        cond.setPrevCurrentStation(0);
+
+        cond.setCurrentStation(0);
+        cond.setPrevCurrentStation();
+
         int expected = 9;
         int actual = cond.getCurrentStation();
 
@@ -80,7 +91,10 @@ class RadioTest {
     @Test
     public void testUpVolume1() {
         Radio cond = new Radio();
-        cond.setUpCurrentVolume(10);
+
+        cond.setCurrentVolume(10);
+        cond.setUpCurrentVolume();
+
         int expected = 10;
         int actual = cond.getCurrentVolume();
 
@@ -90,7 +104,10 @@ class RadioTest {
     @Test
     public void testUpVolume2() {
         Radio cond = new Radio();
-        cond.setUpCurrentVolume(0);
+
+        cond.setCurrentVolume(0);
+        cond.setUpCurrentVolume();
+
         int expected = 1;
         int actual = cond.getCurrentVolume();
 
@@ -100,7 +117,9 @@ class RadioTest {
     @Test
     public void testDownVolume1() {
         Radio cond = new Radio();
-        cond.setDownCurrentVolume(9);
+
+        cond.setCurrentVolume(9);
+        cond.setDownCurrentVolume();
         int expected = 8;
         int actual = cond.getCurrentVolume();
 
@@ -110,7 +129,9 @@ class RadioTest {
     @Test
     public void testDownVolume2() {
         Radio cond = new Radio();
-        cond.setDownCurrentVolume(0);
+
+        cond.setCurrentVolume(0);
+        cond.setDownCurrentVolume();
         int expected = 0;
         int actual = cond.getCurrentVolume();
 
@@ -120,7 +141,9 @@ class RadioTest {
     @Test
     public void testDownVolume3() {
         Radio cond = new Radio();
-        cond.setDownCurrentVolume(1);
+
+        cond.setCurrentVolume(1);
+        cond.setDownCurrentVolume();
         int expected = 0;
         int actual = cond.getCurrentVolume();
 

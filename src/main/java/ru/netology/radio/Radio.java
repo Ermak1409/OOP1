@@ -14,27 +14,8 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setNextCurrentStation(int currentStation) {
 
-        if (currentStation >= 9) {
-            this.currentStation = 0;
-            return;
-        }
-        this.currentStation = currentStation + 1;
-
-    }
-
-    public void setPrevCurrentStation(int currentStation) {
-
-        if (currentStation <= 0) {
-            this.currentStation = 9;
-            return;
-        }
-        this.currentStation = currentStation - 1;
-
-    }
-
-    public void setNewCurrentStationButton(int currentStation) {
+    public void setCurrentStation(int currentStation) {
 
         if (currentStation < 0) {
             return;
@@ -45,7 +26,32 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public void setUpCurrentVolume(int currentVolume) {
+    public void setNextCurrentStation() {
+
+        if (currentStation >= 9) {
+            currentStation = 0;
+            return;
+        }
+        currentStation = currentStation + 1;
+
+    }
+
+    public void setPrevCurrentStation() {
+
+        if (currentStation <= 0) {
+            this.currentStation = 9;
+            return;
+        }
+        this.currentStation = currentStation - 1;
+
+    }
+
+
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
+    public void setUpCurrentVolume() {
         if (currentVolume >= 10) {
             this.currentVolume = 10;
             return;
@@ -56,7 +62,7 @@ public class Radio {
 
     }
 
-    public void setDownCurrentVolume(int currentVolume) {
+    public void setDownCurrentVolume() {
         if (currentVolume <= 0) {
             this.currentVolume = 0;
             return;
