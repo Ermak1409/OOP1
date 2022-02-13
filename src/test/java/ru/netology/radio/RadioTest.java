@@ -25,7 +25,7 @@ class RadioTest {
     }
     
     @Test
-    public void testNewStation2() {
+    public void testNewStation3() {
         Radio radio = new Radio(10);
 
         radio.setCurrentStation(-1);
