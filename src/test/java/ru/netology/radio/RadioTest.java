@@ -23,6 +23,14 @@ class RadioTest {
 
         assertEquals(8, radio.getCurrentStation());
     }
+    
+    @Test
+    public void testNewStation2() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentStation(-1);
+
+        assertEquals(0, radio.getCurrentStation());
 
     @Test
     public void testNextStation1() {
